@@ -1,0 +1,36 @@
+.profiles{
+    top: 200px;
+    left: 0;
+    position: fixed;
+    width: 220px;
+    font-size: .5em;
+    margin-left: 20px;
+    height: 60%;
+    overflow: auto;
+    padding: 15px;
+    background-color: rgb(204, 193, 193);
+    box-shadow: 8px 8px 8px darkgray;
+}
+.profile{
+    font-size: 0.5em;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(105, 99, 100, 0.774);
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+button{
+    background-color: #4e504ea2; /* Green */
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}

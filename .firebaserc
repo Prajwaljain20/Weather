@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "weather-dcc5e": {
+      "hosting": {
+        "weather": [
+          "weather-dcc5e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "weather-dcc5e"
+  }
+}

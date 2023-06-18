@@ -1,0 +1,10 @@
+<div class="profiles">
+    <h2>Profiles</h2>
+    <hr>
+<div *ngFor="let profile of profiles">
+    <div class="profile" (click)="getProfile(profile)">
+        {{profile.name}}
+        <button (click)="onDelete(profile)">-</button>
+    </div>
+</div>
+</div>

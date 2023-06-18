@@ -1,0 +1,48 @@
+<input type="text" placeholder="Enter City Name" (keyup.enter)="onGive()" [(ngModel)]="input">
+<div *ngIf="error.length==0 && data.location!=undefined">
+    <div class="box"
+    [ngClass]="{'sunny':display==='sunny',
+                    'clear':display?.includes('clear'),
+                    'cloudy':display?.includes('cloudy') || display?.includes('overcast'),
+                    'rain':display?.includes('rain') || display?.includes('drizzle'),
+                    'snow':display?.includes('snow'),
+                    'fog':display?.includes('fog')||display?.includes('mist')
+                }">
+        <table>
+        <tr>
+        <th [attr.rowspan]="3">
+        {{data.location?.name}}
+        </th>
+        <td class="left">{{data.location?.localtime}}</td>
+        </tr>
+        <tr>
+        <td class="left">{{data.current?.condition?.text}}<img src="{{data.current?.condition?.icon}}" alt=""></td>
+        </tr>
+        <tr>
+        <td class="left">{{data.current?.temp_c}}&nbsp;&#8451;</td>
+        </tr>
+        <tr>
+            <td>{{data.location?.region}},{{data.location?.country}}</td>
+        </tr>
+        <tr>
+            <td>
+                winds: {{data.current?.wind_kph}}&nbsp;{{data.current?.wind_dir}}
+            </td>
+            <td>
+                Humidity: {{data.current?.humidity}}
+            </td>
+        </tr>
+        </table>
+        <button class="add" (click)="onAdd({'name':data.location?.name})">Add to profile</button>
+</div>
+</div>
+
+<div class="loading" *ngIf="error.length==0 && loading"><div></div><div></div><div></div></div>
+
+<div *ngIf="error.length>0" class="modal" [ngStyle]="{'display':'block'}">
+    <div class="modal-content">
+        <span class="close" (click)="close()">&times;</span>
+        <h1>Error Encountered</h1>
+        <p>{{error}}</p>
+    </div>  
+</div>

@@ -1,0 +1,46 @@
+header{
+    height: 150px;
+    text-align: center;
+    background-image: linear-gradient(to right,rgba(132, 0, 255, 0.705),rgb(7, 113, 184));
+    color: white;
+}
+
+.clear{
+    background-image: linear-gradient(rgb(80, 80, 255),skyblue);
+}
+.sunny{
+    background-image: radial-gradient(circle 150px at 25% 33%, white, rgb(255, 153, 0), lightyellow, aqua);
+}
+.cloudy{
+    background-image: linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+}
+.rain{
+    background-image: linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+    background: url('/assets/rain3.jpg');
+    animation: letItRain 1s linear infinite reverse;
+}
+.snow{
+    background-image: linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+    background: url('/assets/snow.png');
+    animation: letItSnow 1s linear infinite;
+}
+@keyframes letItRain {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+@keyframes letItSnow {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+.fog{
+    background: linear-gradient(rgb(76, 76, 83), rgba(216, 206, 206, 1.5));
+    backdrop-filter: blur(5px);
+}
